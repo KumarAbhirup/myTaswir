@@ -1,0 +1,73 @@
+html, body {
+    background:#000 url(https://c.pxhere.com/photos/b1/5b/milky_way_starry_sky_sky_star_night_sky_space_night_evening-1277134.jpg!d);
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 400;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px !important;
+    font-weight: 0 !important;
+    color:#fff;
+}
+
+.links > a {
+    color: #fff !important;
+    padding: 15px 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none !important;
+    text-transform: uppercase;
+}
+
+.links > a.active {
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom:2px solid #fff;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.section-padding-100{
+  padding-top:100px;
+  padding-bottom:100px;
+}
+
+.my_panel{
+  margin-top:50px;
+}
