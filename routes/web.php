@@ -29,6 +29,6 @@ Route::get('logout', [ 'uses' => 'Auth\AuthController@getLogout', 'as' => 'logou
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/verify/token/{token}', 'Auth\VerificationController@verify')->name('auth.verify');
+Route::get('/redirect', 'SocialAuthFacebookController@redirect');
 
-Route::get('/verify/resend', 'Auth\VerificationController@resend')->name('auth.verify.resend');
+Route::get('/callback', 'SocialAuthFacebookController@callback');

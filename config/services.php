@@ -35,4 +35,10 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id' => '141865283306336',
+        'client_secret' => 'f9569e5c07627da9cc8108d7353ded0f',
+        'redirect' => 'http://localhost:8888/under_dev/mytaswir/public/callback',
+    ],
+
 ];
