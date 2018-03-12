@@ -25,29 +25,15 @@
                                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                                         {{ csrf_field() }}
 
-                                        <div class="form-group{{ $errors->has('fname') ? ' has-error' : '' }}">
-                                            <label for="fname" class="col-md-4 control-label">First Name</label>
+                                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                                            <label for="name" class="col-md-4 control-label">Full Name</label>
 
                                             <div class="col-md-6">
-                                                <input id="fname" type="text" class="form-control" name="fname" value="{{ old('fname') }}" required autofocus>
+                                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
-                                                @if ($errors->has('fname'))
+                                                @if ($errors->has('name'))
                                                     <span class="help-block">
-                                                        <strong>{{ $errors->first('fname') }}</strong>
-                                                    </span>
-                                                @endif
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group{{ $errors->has('lname') ? ' has-error' : '' }}">
-                                            <label for="lname" class="col-md-4 control-label">Last Name</label>
-
-                                            <div class="col-md-6">
-                                                <input id="lname" type="text" class="form-control" name="lname" value="{{ old('lname') }}" required autofocus>
-
-                                                @if ($errors->has('lname'))
-                                                    <span class="help-block">
-                                                        <strong>{{ $errors->first('lname') }}</strong>
+                                                        <strong>{{ $errors->first('name') }}</strong>
                                                     </span>
                                                 @endif
                                             </div>
@@ -81,7 +67,7 @@
                                             </div>
                                         </div> --}}
 
-                                        <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
+                                        {{-- <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
                                             <label for="mobile" class="col-md-4 control-label">City</label>
 
                                             <div class="col-md-6">
@@ -93,7 +79,7 @@
                                                     </span>
                                                 @endif
                                             </div>
-                                        </div>
+                                        </div> --}}
 
                                         {{-- <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                                             <label for="address" class="col-md-4 control-label">Address</label>
@@ -109,7 +95,7 @@
                                             </div>
                                         </div> --}}
 
-                                        <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
+                                        {{-- <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
                                             <label for="country" class="col-md-4 control-label">Country</label>
 
                                             <div class="col-md-6">
@@ -121,7 +107,7 @@
                                                     </span>
                                                 @endif
                                             </div>
-                                        </div>
+                                        </div> --}}
 
                                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                                             <label for="password" class="col-md-4 control-label">Password</label>
@@ -152,6 +138,15 @@
                                                 </button>
                                             </div>
                                         </div>
+
+                                        <hr/>
+
+                                        <div class="form-group">
+                                            <div class="">
+                                              <a href="{{url('/redirect')}}" class="btn btn-primary">Register with Facebook</a>
+                                            </div>
+                                        </div>
+
                                     </form>
                                 </div>
                             </div>

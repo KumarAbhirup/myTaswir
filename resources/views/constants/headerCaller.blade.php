@@ -27,8 +27,11 @@
         } else{
               if($user = Auth::user()){
                   ?>
-                  <a href="{{ url('/') }}">hey, {{ Auth::user()->fname }}!</a>
+                  <a href="{{ url('/') }}">hey, {{ Auth::user()->name }}!</a>
                   <a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      {{ csrf_field() }}
+                  </form>
                   <?php
               } else if(Auth::guest()){
               ?>
