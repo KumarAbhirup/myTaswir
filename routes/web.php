@@ -17,15 +17,9 @@ Route::get('/login', 'RouteController@login');
 
 Route::get('/register', 'RouteController@register');
 
-Route::resource('clients', 'ClientsController');
-
-Route::resource('orders', 'OrdersController');
-
-Route::resource('products', 'ProductsController');
-
 Auth::routes();
 
-Route::get('logout', [ 'uses' => 'Auth\AuthController@getLogout', 'as' => 'logout' ]);
+// Route::get('logout', [ 'uses' => 'Auth\AuthController@getLogout', 'as' => 'logout' ]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 

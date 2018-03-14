@@ -80,7 +80,7 @@
 
                                         <div class="form-group">
                                             <div class="">
-                                              <a href="{{url('/redirect')}}" class="btn btn-primary">Login with Facebook</a>
+                                              <a href="{{url('/redirect')}}" class="btn btn-primary"><i class="fab fa-facebook-square"></i>&nbsp;&nbsp;Login with Facebook</a>
                                             </div>
                                         </div>
 

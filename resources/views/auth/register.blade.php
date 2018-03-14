@@ -143,7 +143,7 @@
 
                                         <div class="form-group">
                                             <div class="">
-                                              <a href="{{url('/redirect')}}" class="btn btn-primary">Register with Facebook</a>
+                                              <a href="{{url('/redirect')}}" class="btn btn-primary"><i class="fab fa-facebook-square"></i>&nbsp;&nbsp;Register with Facebook</a>
                                             </div>
                                         </div>
 

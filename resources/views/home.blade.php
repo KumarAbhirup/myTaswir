@@ -27,7 +27,20 @@
                                       </div>
                                   @endif
 
-                                  You are logged in!
+                                  <div class="ui segments">
+                                    <div class="ui segment">
+                                      <p><a href="{{url('/')}}">Enter the PicWorld</a></p>
+                                    </div>
+                                    <div class="ui segment">
+                                      <p><a href="{{url('/publicize')}}">Publicize a picture</a></p>
+                                    </div>
+                                    <div class="ui segment">
+                                      <p><a href="{{url('/manage')}}">Manage pictures</a></p>
+                                    </div>
+                                    <div class="ui segment">
+                                      <p><a href="{{url('/settings')}}">Profile Settings</a></p>
+                                    </div>
+                                  </div>
 
                               </div>
                           </div>
