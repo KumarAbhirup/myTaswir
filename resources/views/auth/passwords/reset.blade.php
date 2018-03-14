@@ -3,7 +3,7 @@
     @include('constants.assetCaller')
     @include('constants.headerCaller')
 
-                <div class="content">
+                <div class="content margin-fall">
                     <div class="title m-b-md">
                         Password Reset
                     </div>

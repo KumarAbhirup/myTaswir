@@ -8,9 +8,9 @@ html, body {
     margin: 0;
 }
 
-/* .full-height {
+.full-height {
     height: 100vh;
-} */
+}
 
 .flex-center {
     align-items: center;
@@ -66,6 +66,10 @@ html, body {
 .section-padding-100{
   padding-top:100px;
   padding-bottom:100px;
+}
+
+.margin-fall{
+  margin-top:50px;
 }
 
 .my_panel{

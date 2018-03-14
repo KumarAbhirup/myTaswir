@@ -11,15 +11,16 @@
 |
 */
 
-Route::get('/', 'RouteController@welcome');
+// Route::get('/', 'RouteController@welcome');
 
 Route::get('/login', 'RouteController@login');
 
 Route::get('/register', 'RouteController@register');
 
-Auth::routes();
+Route::resource('/', 'PictureController');
+// Route::resource('publicize', 'PictureController', array('names' => array('create' => 'pictures.publicize')));
 
-// Route::get('logout', [ 'uses' => 'Auth\AuthController@getLogout', 'as' => 'logout' ]);
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 

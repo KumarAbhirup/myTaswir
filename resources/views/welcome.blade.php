@@ -3,7 +3,7 @@
     @include('constants.assetCaller')
     @include('constants.headerCaller')
 
-            <div class="content">
+            <div class="content margin-fall">
                 <div class="title m-b-md">
                     <b>{{config('app.name')}}</b>!
                 </div>
@@ -28,52 +28,12 @@
                                       </div>
                                   @endif
 
-                                  <div class="ui four column grid">
-                                    <div class="column">
-                                      <div class="ui segment">
-                                        <img src="http://via.placeholder.com/140x200" />
-                                      </div>
-                                      <div class="ui segment">
-                                        <img src="http://via.placeholder.com/140x200" />
-                                      </div>
-                                      <div class="ui segment">
-                                        <img src="http://via.placeholder.com/140x200" />
-                                      </div>
-                                    </div>
-                                    <div class="column">
-                                      <div class="ui segment">
-                                        <img src="http://via.placeholder.com/140x200" />
-                                      </div>
-                                      <div class="ui segment">
-                                        <img src="http://via.placeholder.com/140x200" />
-                                      </div>
-                                      <div class="ui segment">
-                                        <img src="http://via.placeholder.com/140x200" />
-                                      </div>
-                                    </div>
-                                    <div class="column">
-                                      <div class="ui segment">
-                                        <img src="http://via.placeholder.com/140x200" />
-                                      </div>
-                                      <div class="ui segment">
-                                        <img src="http://via.placeholder.com/140x200" />
-                                      </div>
-                                      <div class="ui segment">
-                                        <img src="http://via.placeholder.com/140x200" />
-                                      </div>
-                                    </div>
-                                    <div class="column">
-                                      <div class="ui segment">
-                                        <img src="http://via.placeholder.com/140x200" />
-                                      </div>
-                                      <div class="ui segment">
-                                        <img src="http://via.placeholder.com/140x200" />
-                                      </div>
-                                      <div class="ui segment">
-                                        <img src="http://via.placeholder.com/140x200" />
-                                      </div>
-                                    </div>
-                                  </div>
+                                  @if (count($pictures)>1)
+                                    Pictures found.
+                                  @else
+                                    No pictures found.
+                                  @endif
+
 
                               </div>
                           </div>
