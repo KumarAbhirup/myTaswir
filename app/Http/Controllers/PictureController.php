@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Picture;
-use App\User;
+use DB;
 
 class PictureController extends Controller
 {
@@ -26,8 +26,7 @@ class PictureController extends Controller
      */
     public function create()
     {
-        $pictures = Picture::all();
-        return view('pictures.publicize')->with('pictures', $pictures);
+        return view('pictures.publicize');
     }
 
     /**
@@ -38,7 +37,10 @@ class PictureController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+          'hashtag' => 'required',
+        ]);
+        return 123;
     }
 
     /**

@@ -22,19 +22,19 @@
                               <div class="panel-heading">Publicize your Picture!</div>
 
                               <div class="panel-body">
-                                  @if (session('status'))
-                                      <div class="alert alert-success">
-                                          {{ session('status') }}
-                                      </div>
-                                  @endif
-
-                                  @if (count($pictures)>1)
-                                    Pictures found.
-                                  @else
-                                    This is publicize page. (No Posts Found)
-                                  @endif
-
-
+                                @include('constants.messages')
+                                {!! Form::open(array(
+                                    'action' => 'PictureController@store',
+                                    'method' => 'POST',
+                                    'files' => true
+                                  ))
+                                !!}
+                                  <div class="form-group">
+                                    {{ Form::label('hashtag', 'HashTag') }}
+                                    {{ Form::text('hashtag', '', ['placeholder' => 'Eg. #Happiness', 'class' => 'form-control', 'name' => 'hashtag' /*'required'*/]) }}
+                                  </div>
+                                    {{ Form::submit('Publicize', ['class' => 'btn btn-primary']) }}
+                                {!! Form::close() !!}
                               </div>
                           </div>
                       </div>
