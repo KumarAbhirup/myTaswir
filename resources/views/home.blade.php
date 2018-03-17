@@ -32,7 +32,7 @@
                                       <p><a href="{{url('/manage')}}">Manage pictures</a></p>
                                     </div>
                                     <div class="ui segment">
-                                      <p><a href="{{url('/publicize')}}">Publicize a picture</a></p>
+                                      <p><a href="{{url('/create')}}">Publicize a picture</a></p>
                                     </div>
                                     <div class="ui segment">
                                       <p><a href="{{url('/settings')}}">Profile Settings</a></p>
