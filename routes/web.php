@@ -11,13 +11,13 @@
 |
 */
 
-// Route::get('/', 'RouteController@welcome');
+Route::get('/', 'RouteController@welcome');
 
 Route::get('/login', 'RouteController@login');
 
 Route::get('/register', 'RouteController@register');
 
-Route::resource('/', 'PictureController');
+Route::resource('/picture', 'PictureController');
 // Route::resource('publicize', 'PictureController', array('names' => array('create' => 'pictures.publicize')));
 
 Auth::routes();

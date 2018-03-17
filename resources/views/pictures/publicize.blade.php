@@ -30,7 +30,8 @@
                                   ))
                                 !!}
                                   <div class="form-group">
-                                    {{ Form::label('hashtag', 'HashTag') }}
+                                    {{ Form::label('hashtag', 'HashT
+                                      ag') }}
                                     {{ Form::text('hashtag', '', ['placeholder' => 'Eg. #Happiness', 'class' => 'form-control', 'name' => 'hashtag' /*'required'*/]) }}
                                   </div>
                                     {{ Form::submit('Publicize', ['class' => 'btn btn-primary']) }}

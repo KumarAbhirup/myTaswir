@@ -28,11 +28,11 @@
                                       </div>
                                   @endif
 
-                                  @if (count($pictures)>1)
+                                  {{-- @if (count($pictures)>1)
                                     Pictures found.
                                   @else
                                     No pictures found.
-                                  @endif
+                                  @endif --}}
 
 
                               </div>

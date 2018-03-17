@@ -27,7 +27,7 @@ class PictureController extends Controller
     public function index()
     {
         $pictures = Picture::all();
-        return view('welcome')->with('pictures', $pictures);
+        return view('pictures.publicize')->with('pictures', $pictures);
     }
 
     /**
