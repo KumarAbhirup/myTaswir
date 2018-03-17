@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Picture;
+use App\User;
 use DB;
 
 class PictureController extends Controller
@@ -26,8 +27,9 @@ class PictureController extends Controller
      */
     public function index()
     {
-        $pictures = Picture::all();
-        return view('pictures.publicize')->with('pictures', $pictures);
+        // $pictures = Picture::all();
+        // return view('welcome')->with('pictures', $pictures);
+        return view('errors.404');
     }
 
     /**
@@ -50,8 +52,20 @@ class PictureController extends Controller
     {
         $this->validate($request, [
           'hashtag' => 'required',
+          // 'image' => 'required',
         ]);
-        return 123;
+
+        // $user = User::all();
+
+        // Create Picture
+        $picture = new Picture;
+        $picture->hash = $request->input('hashtag');
+        //$picture->storage_url = $request->input(null);
+        //$picture->preview_url = $request->input(null);
+        //$picture->user_id = $request->input(auth()->user('id'));
+        $picture->save();
+
+        return redirect('/')->with('success', 'Picture publicized');
     }
 
     /**

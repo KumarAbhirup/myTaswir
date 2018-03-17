@@ -5,7 +5,7 @@
 
             <div class="content margin-fall">
                 <div class="title m-b-md">
-                    Dashboard
+                    <b>{{config('app.name')}}</b>!
                 </div>
 
                 <div class="links">
@@ -14,30 +14,21 @@
                     <a href="https://youtube.com/c/IQubex" target="_blank">YouTube</a>
                     <a href="https://github.com/KumarAbhirup/mytaswir" target="_blank">GitHub</a>
                 </div>
+
                 <div class="container my_panel">
                   <div class="row">
                       <div class="col-md-8 col-md-offset-2">
                           <div class="panel panel-default">
-                              <div class="panel-heading">Dashboard</div>
+                              <div class="panel-heading">Your Pictures</div>
 
                               <div class="panel-body">
-                                  @if (session('status'))
-                                      <div class="alert alert-success">
-                                          {{ session('status') }}
-                                      </div>
-                                  @endif
+                                @include('constants.messages')
 
-                                  <div class="ui segments">
-                                    <div class="ui segment">
-                                      <p><a href="{{url('/manage')}}">Manage pictures</a></p>
-                                    </div>
-                                    <div class="ui segment">
-                                      <p><a href="{{url('/pictures/create')}}">Publicize a picture</a></p>
-                                    </div>
-                                    <div class="ui segment">
-                                      <p><a href="{{url('/settings')}}">Profile Settings</a></p>
-                                    </div>
+                                @foreach ($pictures as $picture)
+                                  <div class="well">
+                                    <h3>{{ $picture->hash }}</h3>
                                   </div>
+                                @endforeach
 
                               </div>
                           </div>

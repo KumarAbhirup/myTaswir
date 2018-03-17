@@ -3,12 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Picture;
+use App\User;
+use DB;
 
 class RouteController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['welcome', 'auth.login', 'auth.register']]);
+    }
+
     public function welcome()
     {
-        return view('welcome');
+        $pictures = Picture::all();
+        return view('welcome')->with('pictures', $pictures);
     }
 
     public function login()
@@ -19,5 +33,13 @@ class RouteController extends Controller
     public function register()
     {
         return view('auth.register');
+    }
+
+    public function manage()
+    {
+        // $user_id = auth()->user('id');
+        // $user = User::find($user_id);
+        $pictures = Picture::all();
+        return view('pictures.manage')->with('pictures', $pictures);
     }
 }

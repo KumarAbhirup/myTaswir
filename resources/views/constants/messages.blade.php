@@ -1,9 +1,10 @@
 @if (count($errors) > 0)
-  @foreach ($errors->all() as $error)
+  {{-- @foreach ($errors->all() as $error) --}}
     <div class="alert alert-danger">
-      {{ $error }}
+      {{-- {{ $error }} --}}
+      There is an error in your input. Please try again.
     </div>
-  @endforeach
+  {{-- @endforeach --}}
 @endif
 
 

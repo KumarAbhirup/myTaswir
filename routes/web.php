@@ -17,8 +17,9 @@ Route::get('/login', 'RouteController@login');
 
 Route::get('/register', 'RouteController@register');
 
-Route::resource('/picture', 'PictureController');
-// Route::resource('publicize', 'PictureController', array('names' => array('create' => 'pictures.publicize')));
+Route::resource('/pictures', 'PictureController');
+
+Route::get('/manage', 'RouteController@manage');
 
 Auth::routes();
 

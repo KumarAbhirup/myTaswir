@@ -15,10 +15,10 @@ class CreatePicturesTable extends Migration
     {
         Schema::create('pictures', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('storage_url');
-            $table->string('preview_url');
+            // $table->string('storage_url');
+            // $table->string('preview_url');
             $table->string('hash');
-            $table->string('user_id');
+            //$table->string('user_id');
             $table->timestamps();
         });
     }

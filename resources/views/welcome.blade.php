@@ -22,19 +22,17 @@
                               <div class="panel-heading">Welcome to the PicWorld!</div>
 
                               <div class="panel-body">
-                                  @if (session('status'))
-                                      <div class="alert alert-success">
-                                          {{ session('status') }}
-                                      </div>
-                                  @endif
+                                  @include('constants.messages')
 
-                                  {{-- @if (count($pictures)>1)
-                                    Pictures found.
+                                  @if (count($pictures)>0)
+                                    @foreach ($pictures as $picture)
+                                      <div class="well">
+                                        <h3>{{ $picture->hash }}</h3>
+                                      </div>
+                                    @endforeach
                                   @else
                                     No pictures found.
-                                  @endif --}}
-
-
+                                  @endif
                               </div>
                           </div>
                       </div>
