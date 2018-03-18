@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Picture;
 use App\User;
+use Auth;
 use DB;
 
 class PictureController extends Controller
@@ -62,7 +63,8 @@ class PictureController extends Controller
         $picture->hash = $request->input('hashtag');
         //$picture->storage_url = $request->input(null);
         //$picture->preview_url = $request->input(null);
-        //$picture->user_id = $request->input(auth()->user('id'));
+        $hey = Auth::user()->id;
+        $picture->user_id = $hey;
         $picture->save();
 
         return redirect('/')->with('success', 'Picture publicized');

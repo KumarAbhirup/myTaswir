@@ -18,6 +18,7 @@ class CreatePicturesTable extends Migration
             // $table->string('storage_url');
             // $table->string('preview_url');
             $table->string('hash');
+            $table->foreign('user_id')->references('id')->on('users');
             //$table->string('user_id');
             $table->timestamps();
         });

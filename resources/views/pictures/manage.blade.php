@@ -24,11 +24,15 @@
                               <div class="panel-body">
                                 @include('constants.messages')
 
-                                @foreach ($pictures as $picture)
-                                  <div class="well">
-                                    <h3>{{ $picture->hash }}</h3>
-                                  </div>
-                                @endforeach
+                                @if (count($pictures)>0)
+                                  @foreach ($pictures as $picture)
+                                    <div class="well">
+                                      <h3>{{ $picture->hash }}</h3>
+                                    </div>
+                                  @endforeach
+                                @else
+                                  You didn't publicized any pictures yet.
+                                @endif
 
                               </div>
                           </div>

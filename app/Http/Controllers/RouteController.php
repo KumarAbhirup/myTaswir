@@ -37,9 +37,8 @@ class RouteController extends Controller
 
     public function manage()
     {
-        // $user_id = auth()->user('id');
-        // $user = User::find($user_id);
-        $pictures = Picture::all();
-        return view('pictures.manage')->with('pictures', $pictures);
+        $user = auth()->user();
+        $pictures = $user->pictures;
+        return view('pictures.manage')->with(['pictures' => $pictures]);
     }
 }
