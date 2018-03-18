@@ -21,7 +21,7 @@ class RouteController extends Controller
 
     public function welcome()
     {
-        $pictures = Picture::all();
+        $pictures = Picture::orderBy('id', 'DESC')->get();
         return view('welcome')->with('pictures', $pictures);
     }
 

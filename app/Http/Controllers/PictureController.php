@@ -53,18 +53,34 @@ class PictureController extends Controller
     {
         $this->validate($request, [
           'hashtag' => 'required',
-          // 'image' => 'required',
+          'pubpic' => 'image|required|max:1999',
         ]);
 
-        // $user = User::all();
+        // Handle PubPic Upload
+        if($request->hasFile('pubpic')){
+
+          // Get filename with extension
+          $fileNameWithExt = $request->file('pubpic')->getClientOriginalName();
+
+          // Get just $fileName
+          $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+
+          // Get just extension
+          $extension = $request->file('pubpic')->getClientOriginalExtension();
+
+          // File name to Store
+          $fileNameToStore = $filename.'_'.time().'.'.$extension;
+
+          // Upload the picture
+          $path = $request->file('pubpic')->storeAs('public/pubpics', $fileNameToStore);;
+        }
 
         // Create Picture
         $picture = new Picture;
         $picture->hash = $request->input('hashtag');
-        //$picture->storage_url = $request->input(null);
+        $picture->pubpic = $fileNameToStore;
         //$picture->preview_url = $request->input(null);
-        $hey = Auth::user()->id;
-        $picture->user_id = $hey;
+        $user_id = Auth::user()->id; $picture->user_id = $user_id;
         $picture->save();
 
         return redirect('/')->with('success', 'Picture publicized');

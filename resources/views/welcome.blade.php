@@ -28,6 +28,7 @@
                                     @foreach ($pictures as $picture)
                                       <div class="well">
                                         <h3>{{ $picture->hash }}</h3>
+                                        <img src="{{ asset('storage/pubpics/'.$picture->pubpic) }}" alt="{{ $picture->hash }}" title="{{ $picture->hash }}" style="width:100%;" />
                                       </div>
                                     @endforeach
                                   @else

@@ -8,7 +8,8 @@ class Picture extends Model
 {
     protected $fillable = [
         'hash',
-        //'user_id'
+        'user_id',
+        'pubpic',
     ];
     public function user()
     {
