@@ -128,6 +128,8 @@ class PictureController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $picture = Picture::find($id);
+        $picture->delete();
+        return redirect('/manage')->with('success', 'Picture deleted');
     }
 }
