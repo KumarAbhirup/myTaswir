@@ -9,8 +9,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="{{asset('favicon.png')}}">
-    <link href="{{asset('css/styles.css')}}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{asset('css/styles.css')}}" rel="stylesheet" type="text/css">
     {{-- <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet"> --}}
 
     <!-- CSRF Token -->

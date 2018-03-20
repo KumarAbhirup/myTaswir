@@ -19,7 +19,7 @@ html, body {
 }
 
 .position-ref {
-    position: relative;
+    /*position: relative;*/
 }
 
 .top-right {
@@ -74,6 +74,16 @@ html, body {
 
 .my_panel{
   margin-top:50px;
+}
+
+@media (min-width:1201px) {
+  .my_panel, .container{
+    margin-top:50px;
+  }
+  .panel-default{
+    width:1100px !important;
+    margin-left:12.5px;
+  }
 }
 
 .segments p{

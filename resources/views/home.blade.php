@@ -15,36 +15,31 @@
                     <a href="https://github.com/KumarAbhirup/mytaswir" target="_blank">GitHub</a>
                 </div>
                 <div class="container my_panel">
-                  <div class="row">
-                      <div class="col-md-8 col-md-offset-2">
-                          <div class="panel panel-default">
-                              <div class="panel-heading">Dashboard</div>
+                  <div class="panel panel-default">
+                      <div class="panel-heading">Dashboard</div>
 
-                              <div class="panel-body">
-                                  @if (session('status'))
-                                      <div class="alert alert-success">
-                                          {{ session('status') }}
-                                      </div>
-                                  @endif
-
-                                  <div class="ui segments">
-                                    <div class="ui segment">
-                                      <p><a href="{{url('/manage')}}">Manage pictures</a></p>
-                                    </div>
-                                    <div class="ui segment">
-                                      <p><a href="{{url('/pictures/create')}}">Publicize a picture</a></p>
-                                    </div>
-                                    <div class="ui segment">
-                                      <p><a href="{{url('/settings')}}">Profile Settings</a></p>
-                                    </div>
-                                  </div>
-
+                      <div class="panel-body">
+                          @if (session('status'))
+                              <div class="alert alert-success">
+                                  {{ session('status') }}
                               </div>
+                          @endif
+
+                          <div class="ui segments">
+                            <div class="ui segment">
+                              <p><a href="{{url('/manage')}}">Manage pictures</a></p>
+                            </div>
+                            <div class="ui segment">
+                              <p><a href="{{url('/pictures/create')}}">Publicize a picture</a></p>
+                            </div>
+                            <div class="ui segment">
+                              <p><a href="{{url('/settings')}}">Profile Settings</a></p>
+                            </div>
                           </div>
+
                       </div>
                   </div>
                 </div>
-
             </div>
         </div>
     </body>
