@@ -13,17 +13,15 @@
 
 Route::get('/', 'RouteController@welcome');
 
-Route::get('/login', 'RouteController@login');
-
-Route::get('/register', 'RouteController@register');
+Route::get('/manage', 'RouteController@manage');
 
 Route::resource('/pictures', 'PictureController');
 
-Route::get('/manage', 'RouteController@manage');
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index');
+
+Route::get('/dashboard/settings', 'UserUpdateController@edit', ['as' => 'auth.settings']);
 
 Route::get('/redirect', 'SocialAuthFacebookController@redirect');
 
