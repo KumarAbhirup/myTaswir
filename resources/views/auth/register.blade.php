@@ -133,7 +133,7 @@
                                   {{-- <label for="avatar" class="col-md-4 control-label">Avatar</label> --}}
 
                                   <div class="col-md-6">
-                                      <input id="avatar" type="hidden" class="form-control" name="avatar" required>
+                                      <input id="avatar" type="hidden" class="form-control" name="avatar" value="NULL" required>
                                   </div>
                               </div>
 

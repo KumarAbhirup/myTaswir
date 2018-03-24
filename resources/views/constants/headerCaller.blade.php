@@ -15,7 +15,7 @@
               if($user = Auth::user()){
                 if (\Request::is('/')) {
                   ?>
-                  <a href="{{ url('/home') }}"><img class="sm-profile-pic" src="{{ Auth::user()->avatar }}" title="{{ Auth::user()->name }}" alt="{{ Auth::user()->name }}" /><?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s Dashboard</a>
+                  <a href="{{ url('/home') }}">{{ addAvatar() }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s Dashboard</a>
                   <a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       {{ csrf_field() }}
@@ -23,15 +23,15 @@
                   <?php
                 } else if(\Request::is('home')){
                   ?>
-                  <a href="{{ url('/') }}"><img class="sm-profile-pic" src="{{ Auth::user()->avatar }}" title="{{ Auth::user()->name }}" alt="{{ Auth::user()->name }}" /><?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s PicWorld</a>
+                  <a href="{{ url('/') }}">{{ addAvatar() }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s PicWorld</a>
                   <a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  <form id/="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       {{ csrf_field() }}
                   </form>
                   <?php
                 } else{
                   ?>
-                  <a href="{{ url('/home') }}"><img class="sm-profile-pic" src="{{ Auth::user()->avatar }}" title="{{ Auth::user()->name }}" alt="{{ Auth::user()->name }}" /><?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s Dashboard</a>
+                  <a href="{{ url('/home') }}">{{ addAvatar() }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s Dashboard</a>
                   <a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       {{ csrf_field() }}
