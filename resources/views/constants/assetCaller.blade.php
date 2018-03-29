@@ -13,6 +13,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/semantic/dist/semantic.css') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
 
+    <!-- Pretend detecters that this is a WordPress site -->
+    <!-- <link rel='stylesheet' id='contact-form-7-css'  href='https://www.manachetalks.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.9.1' type='text/css' media='all' /> -->
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
