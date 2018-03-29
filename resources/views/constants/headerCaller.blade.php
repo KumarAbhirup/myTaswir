@@ -2,7 +2,7 @@
   <?php
     if (\Request::is('/*')) {
       ?>
-        <div class="flex-center position-ref">
+        <div class="section-padding-100 position-ref">
       <?php
     } else{
       ?>
