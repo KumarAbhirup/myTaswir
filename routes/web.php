@@ -13,8 +13,6 @@
 
 Route::get('/', 'RouteController@welcome');
 
-Route::get('/manage', 'RouteController@manage');
-
 Route::resource('/pictures', 'PictureController');
 
 Auth::routes();

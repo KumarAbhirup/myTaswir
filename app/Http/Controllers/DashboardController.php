@@ -23,6 +23,9 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        //return view('dashboard');
+        $user = auth()->user();
+        $pictures = $user->pictures;
+        return view('dashboard')->with(['pictures' => $pictures]);
     }
 }

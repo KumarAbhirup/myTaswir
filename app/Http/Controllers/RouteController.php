@@ -34,11 +34,4 @@ class RouteController extends Controller
     {
         return view('auth.register');
     }
-
-    public function manage()
-    {
-        $user = auth()->user();
-        $pictures = $user->pictures;
-        return view('pictures.manage')->with(['pictures' => $pictures]);
-    }
 }

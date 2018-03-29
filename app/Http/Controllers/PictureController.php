@@ -130,6 +130,6 @@ class PictureController extends Controller
     {
         $picture = Picture::find($id);
         $picture->delete();
-        return redirect('/manage')->with('success', 'Picture deleted');
+        return redirect('/dashboard')->with('success', 'Picture deleted');
     }
 }

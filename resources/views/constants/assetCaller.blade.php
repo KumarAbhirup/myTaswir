@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="{{asset('favicon.png')}}">
     <link href="{{asset('css/styles.css')}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/semantic/dist/semantic.css') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
 
     <!-- CSRF Token -->
@@ -20,7 +21,6 @@
     <script src="{{ asset('js/app.js') }}"></script>
 
     <!-- Semantic UI -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/semantic/dist/semantic.css') }}">
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
