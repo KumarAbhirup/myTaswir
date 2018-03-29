@@ -76,6 +76,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'avatar' => $data['avatar'],
             'password' => bcrypt($data['password']),
+            'last_login' => 'DEFINED',
             // 'mobile' => $data['mobile'],
             // 'address' => $data['address'],
             //'city' => $data['city'],
