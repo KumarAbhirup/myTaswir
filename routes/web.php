@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
 
-Route::get('/dashboard/settings', 'UserUpdateController@edit', ['as' => 'auth.settings']);
+// Route::get('/dashboard/settings', 'UserUpdateController@edit', ['as' => 'auth.settings']);
 
 Route::get('/redirect', 'SocialAuthFacebookController@redirect');
 

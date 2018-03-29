@@ -15,13 +15,13 @@
               if($user = Auth::user()){
                 if (\Request::is('/')) {
                   ?>
-                  <a href="{{ url('/home') }}">{{ addAvatar() }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s Dashboard</a>
+                  <a href="{{ url('/dashboard') }}">{{ addAvatar() }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s Dashboard</a>
                   <a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       {{ csrf_field() }}
                   </form>
                   <?php
-                } else if(\Request::is('home')){
+                } else if(\Request::is('dashboard')){
                   ?>
                   <a href="{{ url('/') }}">{{ addAvatar() }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s PicWorld</a>
                   <a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
@@ -31,7 +31,7 @@
                   <?php
                 } else{
                   ?>
-                  <a href="{{ url('/home') }}">{{ addAvatar() }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s Dashboard</a>
+                  <a href="{{ url('/dashboard') }}">{{ addAvatar() }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s Dashboard</a>
                   <a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       {{ csrf_field() }}
