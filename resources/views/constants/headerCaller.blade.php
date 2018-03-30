@@ -15,7 +15,7 @@
               if($user = Auth::user()){
                 if (\Request::is('/')) {
                   ?>
-                  <a href="{{ url('/dashboard') }}">{{ addAvatar() }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s Dashboard</a>
+                  <a href="{{ url('/dashboard') }}">{{ addAvatar('32') }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s Dashboard</a>
                   <a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       {{ csrf_field() }}
@@ -23,7 +23,7 @@
                   <?php
                 } else if(\Request::is('dashboard')){
                   ?>
-                  <a href="{{ url('/') }}">{{ addAvatar() }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s PicWorld</a>
+                  <a href="{{ url('/') }}">{{ addAvatar('32') }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s PicWorld</a>
                   <a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       {{ csrf_field() }}
@@ -31,7 +31,7 @@
                   <?php
                 } else{
                   ?>
-                  <a href="{{ url('/') }}">{{ addAvatar() }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s PicWorld</a>
+                  <a href="{{ url('/') }}">{{ addAvatar('32') }}<?php $fullname = Auth::user()->name; $name = explode(' ', trim($fullname)); echo $name[0]; ?>'s PicWorld</a>
                   <a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       {{ csrf_field() }}

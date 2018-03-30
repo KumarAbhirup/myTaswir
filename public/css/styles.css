@@ -94,9 +94,9 @@ html, body {
   font-size:20px;
 }
 
-.sm-profile-pic{
-  width: 32px;
-  height: 32px;
+.profile-pic{
+  /* width: 32px;
+  height: 32px; */
   border-radius:100%;
   margin-right:10px;
 }
@@ -107,6 +107,44 @@ html, body {
 
 .panel-body .ui.segment{
   font-size:15px;
+}
+
+.score-counter{
+  margin-top:10px;
+  /* margin-left:-10px; */
+  font-size:16px;
+}
+.score-counter li{
+  list-style-type: none;
+  display:inline-block;
+  padding:0px 5px;
+  margin-left:10px;
+  border-radius:10px;
+  cursor: pointer;
+}
+.score-counter li.score.user{
+  list-style-type: none;
+  display:inline-block;
+  margin-left:10px;
+  border-bottom:0px solid green;
+  cursor: pointer;
+  color:green;
+}
+.score-counter li.score.user:hover{
+  background: transparent;
+}
+.score-counter li.score.duke:hover{
+  background:green;
+  color:#fff;
+  transition: all .4s;
+}
+.score-counter li.score.ditch:hover{
+  background:red;
+  color:#fff;
+  transition: all .4s;
+}
+.score-counter li span{
+  margin-left:5px;
 }
 
 /* CSS Grid */
