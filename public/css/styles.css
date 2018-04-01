@@ -122,7 +122,7 @@ html, body {
   border-radius:10px;
   cursor: pointer;
   text-decoration: none;
-  color:darkgrey !important;
+  color:grey !important;
 }
 .score-counter a.score.user{
   list-style-type: none;

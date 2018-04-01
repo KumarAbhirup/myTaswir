@@ -15,6 +15,8 @@ Route::get('/', 'RouteController@welcome');
 
 Route::resource('/pictures', 'PictureController');
 
+Route::post('/like', 'PictureController@postLike')->name('like');
+
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');

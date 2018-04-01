@@ -8,6 +8,9 @@ use App\User;
 use Auth;
 use DB;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+
 class PictureController extends Controller
 {
 
@@ -131,5 +134,42 @@ class PictureController extends Controller
         $picture = Picture::find($id);
         $picture->delete();
         return redirect('/dashboard')->with('success', 'Picture deleted');
+    }
+
+    // Duke N Ditch system backend
+    public function postLike(Request $request)
+    {
+      $picture_id = $request['pictureId'];
+      $is_like = $request['isLike'] === 'true';
+      $update = false;
+      $picture = Picture::find($pictureId);
+      if(!$picture){
+        return null;
+      }
+      $user = Auth::user();
+      $like = $user->likes()->where('picture_id', $picture_id)->first();
+      if($like){
+        $already_like = $like->like;
+        $update = true;
+        if($already_like == $is_like){
+          $like->delete();
+          return null;
+        }
+      } else{
+        $like = new Like();
+      }
+
+      $like->like = $is_like;
+      $like->user_id = $user->id;
+      $like->picture_id = $picture->id;
+
+      if($update){
+        $like->update();
+      } else {
+        $like->save();
+      }
+
+      return null;
+
     }
 }
