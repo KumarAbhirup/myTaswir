@@ -114,15 +114,17 @@ html, body {
   /* margin-left:-10px; */
   font-size:16px;
 }
-.score-counter li{
+.score-counter li, a{
   list-style-type: none;
   display:inline-block;
   padding:0px 5px;
   margin-left:10px;
   border-radius:10px;
   cursor: pointer;
+  text-decoration: none;
+  color:darkgrey !important;
 }
-.score-counter li.score.user{
+.score-counter a.score.user{
   list-style-type: none;
   display:inline-block;
   margin-left:10px;
@@ -130,20 +132,22 @@ html, body {
   cursor: pointer;
   color:green;
 }
-.score-counter li.score.user:hover{
+.score-counter a.score.user:hover{
   background: transparent;
 }
-.score-counter li.score.duke:hover{
+.score-counter a.score.duke:hover{
   background:green;
-  color:#fff;
+  color:#fff !important;
+  text-decoration: none;
   transition: all .4s;
 }
-.score-counter li.score.ditch:hover{
+.score-counter a.score.ditch:hover{
   background:red;
-  color:#fff;
+  color:#fff !important;
+  text-decoration: none;
   transition: all .4s;
 }
-.score-counter li span{
+.score-counter a span{
   margin-left:5px;
 }
 
