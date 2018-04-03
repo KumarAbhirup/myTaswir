@@ -8,9 +8,6 @@ use App\User;
 use Auth;
 use DB;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
-
 class PictureController extends Controller
 {
 

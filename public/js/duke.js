@@ -22,5 +22,10 @@ $('.like').on('click', function(event){
       event.target.previousElementSibling = 'Like';
     }
   });
+  $.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+  });
 
 });
