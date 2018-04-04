@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Picture;
+
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -23,9 +25,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //return view('dashboard');
         $user = auth()->user();
-        $pictures = $user->pictures;
+        $pictures = Picture::orderBy('created_at', 'DESC')->where('user_id', $user->id)->get();
         return view('dashboard')->with(['pictures' => $pictures]);
     }
 }

@@ -108,7 +108,9 @@ html, body {
 .panel-body .ui.segment{
   font-size:15px;
 }
-
+.date{
+  margin-top:15px;
+}
 .score-counter{
   margin-top:10px;
   /* margin-left:-10px; */
