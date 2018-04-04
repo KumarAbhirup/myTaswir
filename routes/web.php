@@ -15,6 +15,10 @@ Route::get('/', 'RouteController@welcome');
 
 Route::resource('/pictures', 'PictureController');
 
+Route::get('/crop', 'PictureController@crop');
+
+Route::post('/crop', 'PictureController@cropPost');
+
 Route::get('/byCalendar', 'RouteController@byCalendar');
 
 Route::post('/like', 'PictureController@postLike')->name('like');

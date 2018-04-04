@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Picture;
 use App\User;
 use Auth;
+use Session;
 use DB;
 
 class PictureController extends Controller
@@ -79,11 +80,12 @@ class PictureController extends Controller
         $picture = new Picture;
         $picture->hash = $request->input('hashtag');
         $picture->pubpic = $fileNameToStore;
-        //$picture->preview_url = $request->input(null);
         $user_id = Auth::user()->id; $picture->user_id = $user_id;
+        session(['pubpic' => $fileNameToStore]);
         $picture->save();
 
-        return redirect('/')->with('success', 'Picture publicized');
+        // return redirect('/')->with('success', 'Picture publicized');
+        return redirect('crop')->with('pubpic', $fileNameToStore);
     }
 
     /**
@@ -168,5 +170,28 @@ class PictureController extends Controller
 
       return null;
 
+    }
+
+    public function crop()
+    {
+          $picture = asset('storage/pubpics/'.Session::get('pubpic'));
+          return view('pictures.jcrop')->with('pubpic', $picture);
+    }
+
+    public function cropPost(Request $request)
+    {
+        $quality = 90;
+
+        $src  = $request['image'];
+        $img  = imagecreatefromjpeg($src);
+        $dest = ImageCreateTrueColor($request['w'],
+            $request['h']);
+
+        imagecopyresampled($dest, $img, 0, 0, $request['x'],
+            $request['y'], $request['w'], $request['h'],
+            $request['w'], $request['h']);
+        imagejpeg($dest, $src, $quality);
+
+        return "<img src='" . $src . "'>";
     }
 }
