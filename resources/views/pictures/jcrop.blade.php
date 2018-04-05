@@ -8,10 +8,10 @@
     </head>
     <body>
         <h2>Image Cropping with Laravel and Jcrop</h2>
-        <img src="<?php echo $pubpic ?>" id="cropimage">
+        <img src="<?php echo $picture; ?>" id="cropimage">
 
         <?= Form::open() ?>
-        <?= Form::hidden('image', $pubpic) ?>
+        <?= Form::hidden('image', $picname) ?>
         <?= Form::hidden('x', '', array('id' => 'x')) ?>
         <?= Form::hidden('y', '', array('id' => 'y')) ?>
         <?= Form::hidden('w', '', array('id' => 'w')) ?>
@@ -22,7 +22,8 @@
         <script type="text/javascript">
             $(function() {
                 $('#cropimage').Jcrop({
-                    onSelect: updateCoords
+                    onSelect: updateCoords,
+                    aspectRatio: 16 / 9
                 });
             });
             function updateCoords(c) {

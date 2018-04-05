@@ -19,7 +19,7 @@ Route::get('/crop', 'PictureController@crop');
 
 Route::post('/crop', 'PictureController@cropPost');
 
-Route::get('/byCalendar', 'RouteController@byCalendar');
+// Route::get('/byCalendar', 'RouteController@byCalendar');
 
 Route::post('/like', 'PictureController@postLike')->name('like');
 

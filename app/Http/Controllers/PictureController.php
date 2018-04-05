@@ -174,15 +174,16 @@ class PictureController extends Controller
 
     public function crop()
     {
-          $picture = asset('storage/pubpics/'.Session::get('pubpic'));
-          return view('pictures.jcrop')->with('pubpic', $picture);
+          $picname = Session::get('pubpic');
+          $picture = asset('storage/pubpics/'.$picname);
+          return view('pictures.jcrop')->with('picture', $picture)->with('picname', $picname);
     }
 
     public function cropPost(Request $request)
     {
         $quality = 90;
 
-        $src  = $request['image'];
+        $src  = '../public/storage/pubpics/'.$request['image'];
         $img  = imagecreatefromjpeg($src);
         $dest = ImageCreateTrueColor($request['w'],
             $request['h']);
@@ -192,6 +193,6 @@ class PictureController extends Controller
             $request['w'], $request['h']);
         imagejpeg($dest, $src, $quality);
 
-        return "<img src='" . $src . "'>";
+        return redirect('/')->with('success', 'Picture publicized successfully');
     }
 }
