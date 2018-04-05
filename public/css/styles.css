@@ -111,6 +111,9 @@ html, body {
 .date{
   margin-top:15px;
 }
+#cropimage{
+  width:100%;
+}
 .score-counter{
   margin-top:10px;
   /* margin-left:-10px; */

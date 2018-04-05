@@ -85,7 +85,7 @@ class PictureController extends Controller
         $picture->save();
 
         // return redirect('/')->with('success', 'Picture publicized');
-        return redirect('crop')->with('pubpic', $fileNameToStore);
+        return redirect('crop')->with('pubpic', $fileNameToStore)->with('picture', $picture);
     }
 
     /**
