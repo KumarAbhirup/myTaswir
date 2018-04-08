@@ -25,12 +25,6 @@ class RouteController extends Controller
         return view('welcome')->with('pictures', $pictures);
     }
 
-    /*public function byCalendar()
-    {
-        $pictures = Picture::orderBy('created_at', 'DESC')->get();
-        return view('pictures.calendarFilter')->with('pictures', $pictures);
-    }*/
-
     public function login()
     {
         return view('auth.login');

@@ -19,15 +19,11 @@ Route::get('/crop', 'PictureController@crop');
 
 Route::post('/crop', 'PictureController@cropPost');
 
-// Route::get('/byCalendar', 'RouteController@byCalendar');
-
 Route::post('/like', 'PictureController@postLike')->name('like');
 
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
-
-// Route::get('/dashboard/settings', 'UserUpdateController@edit', ['as' => 'auth.settings']);
 
 Route::get('/redirect', 'SocialAuthFacebookController@redirect');
 

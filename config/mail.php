@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'info@streamduck.com'),
-        'name' => env('MAIL_FROM_NAME', 'StreamDuck'),
+        'address' => env('MAIL_FROM_ADDRESS', 'info@mytaswir.com'),
+        'name' => env('MAIL_FROM_NAME', 'myTaswir'),
     ],
 
     /*
