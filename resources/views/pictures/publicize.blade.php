@@ -26,9 +26,6 @@
                             <a class="active item" href="{{ url('/pictures/create') }}">
                               Publicize
                             </a>
-                            <a class="item" href="{{ url('/settings') }}">
-                              Settings
-                            </a>
                           </div>
                           <div class="ui segment">
                             @include('constants.messages')

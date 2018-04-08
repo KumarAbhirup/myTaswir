@@ -26,17 +26,6 @@
                             <a class="item" href="{{ url('/pictures/create') }}">
                               Publicize
                             </a>
-                            <a class="item" href="{{ url('/settings') }}">
-                              Settings
-                            </a>
-                            {{-- <div class="right menu">
-                              <div class="item">
-                                <div class="ui transparent icon input">
-                                  <input type="text" placeholder="Search HashTag">
-                                  <i class="search link icon"></i>
-                                </div>
-                              </div>
-                            </div> --}}
                           </div>
                           <div class="ui segment">
                             @include('constants.messages')
